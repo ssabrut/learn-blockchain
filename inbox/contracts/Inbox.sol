@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.7.4;
+pragma solidity ^0.4.17;
 
 contract Inbox {
     string public message;
@@ -20,18 +20,11 @@ contract Inbox {
     // view: Function does not modify the state
     // payable: Function allows them to receive Ether along with a call
 
-    constructor(string memory initialMessage) {
+    function Inbox(string memory initialMessage) public {
         message = initialMessage;
     }
 
     function setMessage(string memory newMessage) public {
         message = newMessage;
-    }
-
-    function doMath(int a, int b) public pure {
-        a + b;
-        b - a;
-        a * b;
-        a == 0;
     }
 }
